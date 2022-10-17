@@ -143,12 +143,12 @@ sudo curl -O https://portal.socketxp.com/download/darwin/socketxp && chmod 777 s
 socketxp login "authentication_token_goes_here"
 socketxp connect http://localhost:8080
 Connected.
-Public URL -> https://SrimathiElango21-z012h3op.socketxp.com
+Public URL -> https://priyavardhan-z012h3op.socketxp.com
 ```
 ---
 2. On Github, navigate to your [repository](https://github.com/Priyavardhan01/docker-swarm) -> Go to `Settings` -> `Webhooks` -> in Payload URL, enter Jenkins URL e.g:
 ```bash
-http://SrimathiElango21-z012h3op.socketxp.com/github-webhook/
+http://priyavardhan-z012h3op.socketxp.com/github-webhook/
 ```
 -> Enable `SSL verification` -> `Update webhook` -> `Redeliver`
 
@@ -184,7 +184,7 @@ Once our CI build is successful, create another build on Jenkins which will list
 ```bash
 pipeline {
   environment {
-    registry = "SrimathiElango21/docker_automation"
+    registry = "priyavardhan/docker_automation"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
