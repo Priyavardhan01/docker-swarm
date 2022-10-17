@@ -146,7 +146,7 @@ Connected.
 Public URL -> https://SrimathiElango21-z012h3op.socketxp.com
 ```
 ---
-2. On Github, navigate to your [repository](https://github.com/SrimathiElango21/Setting-Up-Jenkins-Pipeline-to-Deploy-Docker-Swarm/tree/main/Docker_Jenkins_Pipeline) -> Go to `Settings` -> `Webhooks` -> in Payload URL, enter Jenkins URL e.g:
+2. On Github, navigate to your [repository](https://github.com/Priyavardhan01/docker-swarm) -> Go to `Settings` -> `Webhooks` -> in Payload URL, enter Jenkins URL e.g:
 ```bash
 http://SrimathiElango21-z012h3op.socketxp.com/github-webhook/
 ```
@@ -192,7 +192,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/SrimathiElango21/Setting-Up-Jenkins-Pipeline-to-Deploy-Docker-Swarm'
+        git 'https://github.com/Priyavardhan01/docker-swarm'
       }
     }
     stage('Building image') {
@@ -224,7 +224,7 @@ pipeline {
 In this pipeline, we have 2 environment variables to change the registry and credentials:
 ```bash
 environment {
-    registry = "SrimathiElango21/docker_automation"
+    registry = "priyavardhan/docker_automation"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -233,7 +233,7 @@ Jenkins will clone a git repository that has a Dockerfile inside
 ```bash
 stage('Cloning Git') {
       steps {
-        git 'https://github.com/SrimathiElango21/Setting-Up-Jenkins-Pipeline-to-Deploy-Docker-Swarm'
+        git 'https://github.com/Priyavardhan01/docker-swarm'
       }
     }
 ```
